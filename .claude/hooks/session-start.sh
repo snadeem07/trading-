@@ -1,6 +1,6 @@
 #!/bin/bash
 # SessionStart hook: installs the stop-hook globally so every response
-# in this session is logged to the claude-session-logs branch on GitHub.
+# in this session is logged to the session-logs branch on GitHub.
 
 set -euo pipefail
 

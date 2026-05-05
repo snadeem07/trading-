@@ -1,5 +1,5 @@
 #!/bin/bash
-# Auto-logs every Claude Code session to the claude-session-logs branch on GitHub.
+# Auto-logs every Claude Code session to the session-logs branch on GitHub.
 
 input=$(cat)
 
@@ -36,7 +36,7 @@ SESSION_DATE="$(date -u +%Y-%m-%d)"
 BASENAME="$(basename "$JSONL_FILE" .jsonl)"
 TMP_MD="/tmp/claude-session-${BASENAME}.md"
 MD_FILENAME="${SESSION_DATE}_${BASENAME}.md"
-LOG_BRANCH="claude-session-logs"
+LOG_BRANCH="session-logs"
 
 python3 "$REPO_DIR/.claude/session-to-md.py" "$JSONL_FILE" "$TMP_MD" 2>/dev/null
 
